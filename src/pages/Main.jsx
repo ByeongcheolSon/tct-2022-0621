@@ -116,7 +116,14 @@ function Main() {
             음악차트
           </span>
           <span style={{ textAlign: "center" }}>
-            {time}
+            {!time &&
+              (
+                <div>시간 설정 중...</div>
+              )
+            }
+            {time &&
+              (<div>{time}</div>)
+            }
           </span>
           <div>
             <span className={styles.category} onClick={() => {setCategory('domestic')}}>국내</span>
